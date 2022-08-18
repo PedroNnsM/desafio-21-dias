@@ -3,7 +3,6 @@
     --body-color: #333;
     --link-color: #333;
     --link-hover-color: #333;
-
 }
 *{
     margin: 0;
@@ -27,6 +26,13 @@ body {
 
     background-color: var(--body-bg);
     color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.3s linear;
+
 }
 
 a {
@@ -37,10 +43,48 @@ a {
         color: var(--link-hover-color);
     }
 }
+.checkbox{
+    position: absolute;
+    opacity: 0;
+}
 
 .label {
+    margin:50px;
     background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+
     display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
     height: 26px;
     width: 50px;
+    transform: scale(1.5);
+   
+}
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: 0.3s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
 }
