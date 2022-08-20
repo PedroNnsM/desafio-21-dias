@@ -1,51 +1,69 @@
 body {
     font-family: 'Roboto Mono',monospace;
     background-image: url('https://cdn.discordapp.com/attachments/468228661418524673/823877228315541544/unknown.png');
-    background-color: #000000;
+    background-color: var(--cor-fundo);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     font-size: 1.2em;
-  }
-  
+}
 
+:root {
+    --calculadora: #9466ff;
+    --cor-fundo: #222;
+    --cor-botao: #28203e;
+    --cor-botao-hover: #734bd1;
+    --borda: #eb8a1d;
+    --texto: #a8a8b3;
+
+} 
+
+header{
+    width:292px;
+    text-align:center;
+    margin: 0 auto;
+    background-color: var(--cor-fundo);
+    padding: 1em;
+    color: var(--texto);
+}
   
 .calculadora {
-  margin: 0 auto;
-  width: 294px;
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
-  padding: 15px;
+    margin: 0 auto;
+    width: 294px;
+    background-color: var(--calculadora);
+    border: 2px solid var(--borda);
+    padding: 15px;
+    padding-right: 5px;
     border-radius: 15px;
 }
 
 .tela {
-  width: 279px;
-  border: 0;
-  border-radius: 1px;
-  height: 60px;
-  padding-right: 15px;
-  padding-top: 10px;
-  background-color: #202020;
-  text-align: right;
-  margin-right: 6px;
-  font-size: 2.5rem;
-  color: white;
-  overflow-x: auto;
-  transition: all .2s ease-in-out;
+    width: 279px;
+    border: 2px solid var(--borda);
+    border-radius: 5px;
+    height: 60px;
+    padding-right: 5px;
+    padding-top: 10px;
+    background-color: #3c3c42;
+    text-align: right;
+    margin-right: 6px;
+    font-size: 2.5rem;
+    color: white;
+    overflow-x: auto;
+    transition: all .2s ease-in-out;
 }
 
 .contas div {
-  color: white;
-  display: inline-block;
-  border: 0;
-  border-radius: 15px;
-  width: 40px;
-  text-align: center;
-  padding: 10px;
-  margin: 20px 4px 10px 0;
-  cursor: pointer;
-  background-color: #202020;
+    color: white;
+    display: inline-block;
+    border: 0;
+    border-radius: 15px;
+    width: 40px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 4px 10px 0;
+    cursor: pointer;
+    background-color: var(--cor-botao);
 
 }
 
@@ -63,22 +81,52 @@ body {
     padding: 10px;
     margin: 10px 4px 10px 0;
     cursor: pointer;
-    background-color: #202020;
+    background-color:  var(--cor-botao);
 
 }
 
 .igual {
-  display: inline-block;
-  border: 0;
-  border-radius: 15px;
-  width: 40px;
-  font-size: 2.5rem;
-  text-align: center;
-  padding: 93px 9px;
-  margin: 10px 6px 10px 0;
-  vertical-align: top;
-  cursor: pointer;
-  color: #FFF;
-  background-color: #202020;
- 
+    display: inline-block;
+    border: 0;
+    border-radius: 15px;
+    width: 40px;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 93px 9px;
+    margin: 10px 6px 10px 0;
+    vertical-align: top;
+    cursor: pointer;
+    color: #FFF;
+    background-color:  var(--cor-botao);
+}
+
+.igual:hover , .numeros div:hover, .contas div:hover {
+    background-color: var(--cor-botao-hover);     
+}
+
+.igual:target {
+    background-color: #000000;
+}
+
+footer {
+    display:flex;
+    flex-direction: column;
+    max-width: 292px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: var(--texto);
+}
+footer ul{
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+}
+
+.fa-brands{
+    font-size: 2rem;
+    color: var(--borda);
 }
