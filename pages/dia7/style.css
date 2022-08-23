@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
 body {
     font-family: 'Roboto Mono',monospace;
     background-color: var(--bg-color);
@@ -13,7 +18,7 @@ body {
 }
 
 :root {
-    --calculadora: #9466ff;
+    --bg: #9466ff;
     --bg-color: #f5f5f5;
     --cor-botao: #28203e;
     --cor-botao-hover: #734bd1;
@@ -30,10 +35,57 @@ header{
     color: var(--texto);
 }
 header p {
-    font-size: 3em;
+    font-size: 1em;
     text-transform: uppercase;
 }
 
+main{
+    width: 400px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content:center;
+    align-itens: center;
+    background-color: var(--bg);
+
+}
+main .cronometro {
+    width: 80%;
+    height: 80%;
+    margin:auto;
+    border-radius: 35px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+
+}
+main .cronometro h3{
+    background-color: var(--borda);
+    width:30%;
+}
+
+.cronometro p {
+    background-color: var(--borda);
+    width: 10%;
+
+}
+.cronometro ul {
+    width: 70%;
+    margin: 0 auto;
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.cronometro ul li {
+    margin: 0 auto;
+}
+button{
+    width: 55px;
+    height: 30px;
+    border-radius: 35px;
+}
 
 footer {
     display:flex;

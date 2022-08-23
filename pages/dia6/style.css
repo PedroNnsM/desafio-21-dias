@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 body {
-    font-family: 'Roboto Mono',monospace;
-    background-color: #f5f5f5;
-    background-image: url('https://acegif.com/wp-content/uploads/gif/outerspace-6.gif');
+    font-family: 'Rubik Dirt', cursive;
+    background-image: linear-gradient(to bottom, var(--cor-botao-hover) , var(--calculadora));
+    /* background-image: url('https://acegif.com/wp-content/uploads/gif/outerspace-6.gif'); */
 
     display: flex;
     height: 100vh;
     justify-content: space-around;
     flex-direction: column;
+    color: var(--borda)
 }
 
 :root {
-    --calculadora: #9466ff;
+    --calculadora: #222;
     
     --cor-botao: #28203e;
     --cor-botao-hover: #734bd1;
@@ -19,6 +20,10 @@ body {
     --texto: #28203e;
 
 } 
+header{
+    margin: 0 auto;
+    
+}
 .icone {
     width: 80px;
     height: 85px;
@@ -29,7 +34,7 @@ body {
 
 .flutua{
     position: absolute;
-   
+   padding:15px;
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.19);
     border-radius: 16px;
@@ -48,7 +53,6 @@ body {
 
 .card {
     
-    color: #fff;
     position:absolute;
     z-index: 1000;
     transform: translate(-50%, -50%);
@@ -75,40 +79,31 @@ body {
 }
   
 
-
-ul {
+footer {
+    display:flex;
+    flex-direction: column;
+    max-width: 292px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    color: var(--borda);
+}
+footer p {
+    font-family: 'Rubik Dirt', cursive;
+    text-transform: uppercase;
+}
+footer ul{
+    margin-top: 30px;
     list-style: none;
+    display: flex;
     padding: 0;
-    margin: 0;
-
+    justify-content: space-around;
 }
 
-ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-ul li a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100px;
-    height: 40px;
-
-    text-decoration: none;
-    color: var(--texto);
-    font-size: 20px;
-    font-weight: bold;
-
-    padding: 10px;
-    transition: all 0.3s;
-    background-color: var(--cor-botao);
-    border: 1px solid var(--borda);
-    border-radius: 5px;
-
+.fa-brands{
+    font-size: 2rem;
+    color: var(--borda);
 }
 #css{
     top: 70%;
@@ -131,17 +126,17 @@ ul li a {
 }
 
 #css.flutua {
-    animation: float 2s linear infinite;
+    animation: float 5s linear infinite;
     transform: translatex(600px)
 }
 #html.flutua {
     animation: float2 2s linear infinite;
 }
 #js.flutua {
-    animation: float3 2s linear infinite;
+    animation: float3 3s linear infinite;
 }
 #react.flutua {
-    animation: float4 2s linear infinite;
+    animation: float4 3s linear infinite;
 }
 .fa-brands {
     font-size: 20px;
@@ -175,24 +170,24 @@ ul li a {
 
 @keyframes float3 {
     0% {
-        transform: translatey(-100px);
+        transform: translatey(-200px);
     }
     50% {
         transform: translatey(300px);
     }
     100% {
-        transform: translatey(-100px);
+        transform: translatey(-200px);
     }
 }
 
 @keyframes float4 {
     0% {
-        transform: translatey(0);
+        transform: translatey(10);
     }
     50% {
-        transform: translatey(30px);
+        transform: translatey(130px);
     }
     100% {
-        transform: translatey(0);
+        transform: translatey(10);
     }
 }
