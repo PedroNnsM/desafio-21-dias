@@ -1,0 +1,111 @@
+:root {
+    --image-from-somewhere: url(https://rollingstone.uol.com.br/media/_versions/luke_star_wars_widelg.jpg);
+    --body-bg: #f5f5f5;
+    --body-color: #333;
+    --link-color: #00875f;
+    --link-hover-color: #333;
+    --color-mode: #FACD06
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+}
+
+.dark-mode:root {
+    --image-from-somewhere: url(https://files.meiobit.com/wp-content/uploads/2022/06/darth-vader-001.jpg);
+    --body-bg:  #6833e4;
+    --body-color: #f5f5f5;
+    --link-color: #04d361;
+    --link-hover-color: #e9e9e9;
+    --color-mode: #9F1212
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+
+
+    background-color: var(--body-bg);
+    background-image: var(--image-from-somewhere);
+    background-size: cover;
+
+    color: var(--body-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: 0.3s linear;
+
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+}
+a:hover {
+    color: var(--link-hover-color);
+}
+.checkbox{
+    position: absolute;
+    opacity: 0;
+}
+
+.label {
+    margin:50px;
+    background-color: var(--label-bg);
+    border-radius: 50px;
+    cursor: pointer;
+
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 70px;
+    transform: scale(1.5);
+   
+    box-shadow: 0 0 0 1px var(--color-mode);;
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: flex;
+    align-items: center;
+    
+    color: #000;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: 0.3s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(42px) rotate(540deg);
+}
+
+.invisivel{
+    display: none;
+}
+
+.fa-brands{
+    color: var(--color-mode);
+    transition: 1.5s;
+}
+ul{
+    margin-top: 30px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
