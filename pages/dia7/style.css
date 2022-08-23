@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,500;1,700&family=Rubik+Dirt&display=swap');
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 body {
-    font-family: 'Roboto Mono',monospace;
     background-color: var(--bg-color);
     background-size: cover;
 
@@ -40,15 +39,18 @@ header p {
 }
 
 main{
+    background-image: linear-gradient(to bottom, var(--cor-botao-hover) , var(--borda));
     width: 400px;
     height: 500px;
     margin: 0 auto;
+    border-radius:35px;
     display: flex; 
     justify-content:center;
     align-itens: center;
     background-color: var(--bg);
 
 }
+
 main .cronometro {
     width: 80%;
     height: 80%;
@@ -58,17 +60,25 @@ main .cronometro {
     justify-content:space-around;
     align-items: center;
     flex-direction: column;
-    border: 1px solid #000;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 
 }
 main .cronometro h3{
     background-color: var(--borda);
-    width:30%;
+    width:60%;
+    text-align:center;
 }
 
 .cronometro p {
     background-color: var(--borda);
-    width: 10%;
+    width: 30%;
+    text-align:center;
 
 }
 .cronometro ul {
@@ -82,7 +92,13 @@ main .cronometro h3{
     margin: 0 auto;
 }
 button{
-    width: 55px;
+    background-color: #5cccff;
+    color :#000;
+    text-transform: uppercase;
+    width: 70px;
+    font-family: 'Roboto Mono',monospace;
+    
+    
     height: 30px;
     border-radius: 35px;
 }

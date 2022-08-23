@@ -15,12 +15,11 @@
     </header>
     <main>
         <div class="cronometro">
-            <button onclick="volta()"></button>
             <h3 id="counter">
                 00:00:000
             </h3>
-            <p>
-                oioioi
+            <p id="voltas">
+                00
             </p>
             <ul>
                 <li>
@@ -33,6 +32,7 @@
                     <button onclick="parar()">Parar</button>
                 </li>
             </ul>
+            <button onclick="voltas()" id="btn">Volta</button>
         </div>
 
 
@@ -47,6 +47,7 @@
 
     </footer>
     
-    <script src="script.js"></script>
+    <script src="timer.js"></script>
+    <script src="voltas.js"></script>
 </body>
 </html>
