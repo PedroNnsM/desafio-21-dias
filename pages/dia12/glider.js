@@ -1,12 +1,8 @@
-const $simpleCarousel = document.querySelector('.js-carousel')
+const $thumbsCarousel = document.querySelector('.glider-contain-thumbs')
+const $thumbs = document.querySelectorAll("[data-carousel-index]")
 
-new Glider($simpleCarousel, {
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    draggable: true,
-    dots: ".js-carousel--simple-dots",
-    arrows: {
-      prev: ".js-carousel--simple-prev",
-      next: ".js-carousel--simple-next",
-    },
-  });
+const thumbsGlider = new Glider($thumbsCarousel,{
+
+    slideToShow:1,
+    slideToScroll:1
+})
