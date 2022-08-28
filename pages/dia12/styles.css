@@ -30,28 +30,53 @@ header{
     margin: 0 auto;
     padding: 1em;
     color: var(--destaque);
+} 
+h1{
+    font-size: 38px;
+}
+p {
+    font-size: 28px;
 }
 .glider-contain-thumbs{
-    margin-bottom: 15px;
-    max-width: 700px ;
-    height: 100%
- 
-
-}
-.js-carousel--responsive{
     display: flex;
-}
-img{
-    max-width: 250px;
-}
+    justify-content: center;
+    flex-direction: column;
+    max-width: 700px ;
+    height: 700px;
+    padding:15px;
 
+}
+.js-carousel--thumbs{
+    display:flex;
+    width: 700px;
+}
+.glider-track{
+    width: 700px;
+    height: 700px;
+}
+/* .js-carousel--responsive{
+    display: flex;
+    width: 100%;
+} */
+
+.slides{
+    display:flex;
+    border: rem(2) solid var(--destaque);
+    margin-bottom: 10px;
+    border: 5px solid var(--destaque);
+    
+}
 
 .slide {
-    width:100%;
     align-items: center;
     color: var(--detalhes);
     display: flex;
-    justify-content: center;
+ 
+}
+.slide img {
+    width:700px;
+    height: 700px;
+    
 }
 .thumbs {
     display: flex;
@@ -68,10 +93,11 @@ img{
     height:75px
 }
 .thumb:hover {
-    transform: scale(1.2)
+    transform: scale(1.2);
+    z-index: z-index(default);
 }
 .thumb:active{
-    transform: scale(0.95)
+    transform: scale(0.95);
 }
 /* .carrousel{
     box-shadow: 2px 2px 4px #000;
