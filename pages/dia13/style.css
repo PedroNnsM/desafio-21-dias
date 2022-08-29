@@ -46,3 +46,31 @@ nav ul{
     margin-left: 35px
 
 }
+nav ul li:hover {
+    opacity: 0.8;
+    scale: 1.1;
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--destaque);
+    line-height: 80px;
+    margin-left: 40px;
+    cursor: pointer;
+    position:relative;
+    display: none;
+}
+#check{
+    position:absolute;
+    opacity: 0;
+}
+
+
+@media max-width(900px){
+    nav ul{
+        display: none;
+    }
+    
+    .fa-solid{
+        display:block;
+    }
+}
