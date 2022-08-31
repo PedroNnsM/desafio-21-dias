@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --background: rgb(56, 56, 66);
+    --destaque: rgb(66, 211, 255);
+    --secundaria: #1d2b3a;
+    --detalhes:rgba(5,5,5,0.712);
+    
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  list-style: none;
+  text-decoration:none;
+}
+ body{
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background: var(--background);
+    flex-direction: column;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+main{
+  
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  gap: 25px;
+}
+.question{
+  margin: 15px 0;
+  text-align: center;
+  border: 2px solid var(--destaque);
+  border-radius: 15px;
+  text-transform: uppercase;
+  padding: 15px;
+
+}
+.container{
+}
+
+.answers{
+  text-align: center;
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+
+}
+
+label{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+label p {
+  padding-left:15px;
+}
+button{
+  width: 50%;
+  
+  margin: 0 auto;
+  margin-button: 35px;
+  background-color: var(--destaque);
+  color: var(--detalhes);
+  font-size: 35px
+
+}
+#results{
+  margin: 25px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  color: var(--destaque);
+  font-size:35px;
+}
+
+
+
