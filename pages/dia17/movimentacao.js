@@ -6,6 +6,7 @@ var vel;
 var obj;
 var tempo;
 var teclaPrecionada;
+var $teclaEvento = document.querySelector('.teclaPrecionada')
 
 function inicia(params) {
     dx = 0;
@@ -23,20 +24,42 @@ function inicia(params) {
 }
 
 function tecladDw(event) {
+    var output = [];
+
     let tecla = event.keyCode;
     if(tecla == 37){
-        dx = -1;
+        
+        dx = -1; 
+        
+        teclaPrecionada ='&#9664;'//esquerda
+        
+        output.push('keyDown ' +   teclaPrecionada)
+        $teclaEvento.innerHTML = output.join()
+       
     }else if (tecla == 38){
         dy = -1;
+        teclaPrecionada = '&#9650;'//cima
+        output.push('keyDown ' +   teclaPrecionada)
+        $teclaEvento.innerHTML = output.join()
+        
     }else if(tecla == 39 ){
         dx= 1;
+        teclaPrecionada = '&#9654;'//dire
+        output.push('keyDown ' +   teclaPrecionada)
+        $teclaEvento.innerHTML = output.join()
+        
     }else if ( tecla == 40){
         dy = 1;
+        teclaPrecionada = '&#9660;'//baixo
+        output.push('keyDown ' +   teclaPrecionada)
+        $teclaEvento.innerHTML = output.join()
+        
     }
 }
 
 function tecladUp(event) {
     let tecla = event.keyCode;
+    
     if(tecla == 37){
         dx = -1;
     }else if (tecla == 38){
@@ -50,6 +73,7 @@ function tecladUp(event) {
 
 
 function enterFrame(){
+    
     px += dx*vel;
     py += dy*vel;
     obj.style.left = px +'px';

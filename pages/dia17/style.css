@@ -23,10 +23,10 @@ body{
 
 }
 header{
-    position: fixed;
-    top: 35px;
-    left:48%;
-    font-family:
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+    
 }
 
 
